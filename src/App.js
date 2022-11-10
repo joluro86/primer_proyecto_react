@@ -1,4 +1,5 @@
 import React from 'react'
+import Contador from './components/Contador';
 import Evento from './components/Evento';
 import Parrafo from './components/Parrafo';
 import Variables from './components/Variables';
@@ -9,6 +10,7 @@ function App() {
       <Parrafo/>
       <Variables/>
       <Evento/>
+      <Contador/>
     </div>
   );
 }
