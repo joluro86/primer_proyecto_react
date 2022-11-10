@@ -1,18 +1,20 @@
-import React from 'react'
+import React, {Fragment, useState} from 'react'
 
 const Evento = () => {
+    
+    const [texto, setTexto] = useState('texto desde estado')
 
-    const eventoClick = (e, a) => {
-        const mult = e*a
-        alert('la mult ' + mult)
+    const eventoClick = () => {
+        console.log('diste click')
+        setTexto('cambiando el texto')
     }
 
     return (
-    <div>
+    <Fragment>
         <hr />
-        <h2>Eventos</h2>
-        <button onClick={ () => eventoClick(2,4) }>Click</button>
-    </div>
+        <h2>{ texto }</h2>
+        <button onClick={ () => eventoClick() }>Click</button>
+    </Fragment>
   )
 
 }
