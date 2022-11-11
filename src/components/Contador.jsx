@@ -1,25 +1,25 @@
-import React from 'react'
+import React from "react";
 
 const Contador = () => {
+  const [contador, SetContador] = React.useState(0);
 
-    const [contador, SetContador] = React.useState(0)
+  const aumentar = () => {
+    console.log(contador);
+    SetContador(contador + 1);
+  };
+  
+  return (
+    <div>
+      <h2>Contador</h2>
+      <h3>Nuestro numero aumentando: {contador}</h3>
+      <h4>
+        {
+        contador > 3 ? 'mayor a 3' : 'menor a 4'
+        }
+      </h4>
+      <button onClick={() => aumentar()}>Reiniciar</button>
+    </div>
+  );
+};
 
-    const aumentar = setInterval(() => {
-        SetContador(contador + 1)
-        if(contador===10){
-            SetContador(0)
-        } 
-        console.log(contador)
-    }, 1000)
-
-
-    return (
-        <div>
-            <h2>Contador</h2>
-            <h3>Nuestro numero aumentando: {contador}</h3>
-        </div>
-    )
-}
-
-
-export default Contador
+export default Contador;
