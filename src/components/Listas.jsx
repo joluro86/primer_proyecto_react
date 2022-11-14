@@ -28,7 +28,6 @@ const Listas = () => {
     }
 
     return (
-
         <div>
             <h2>Lista</h2>
             {
@@ -37,12 +36,10 @@ const Listas = () => {
                     <h4 key={item.id}>
                         {item.texto === 'dos' ? item.texto = 'cien' : item.texto}
                     </h4>
-
                 ))
             }
             <button onClick={() => agregarElemento()} >Agregar</button>
         </div>
-
     )
 }
 
